@@ -1,31 +1,35 @@
-
-//Business logic 
-function checkNumber(element){
-  var a1="Beep!";
-  var a2="Boop!";
-  var a3="Be my neigh";
-  for (let i=0; i < element; i++){
-    let outputFinal= element;
-    if (element.includes(1)){
-      return outputFinal;
-    }
-    else if (checkNumber.includes(2)){
-    return outputString.push(a2);
-      }
-    else if (checkNumber.includes(3)){
-    return outputString.push(a3);
-      }
-  }
-  
-}
-
-
-// User interface
 $(document).ready(function() {
-  $("form").submit(function() {
-    event.preventDefault();
-    userInputVar= parseInt($("input:text[name=userInput]").val());
-    $("#output").append(outputFinal)
 
-  });
+    //Business logic 
+    function checkNumber(userInputVar){
+    let userInputVar1= parseInt($("input:text[name=userInput]").val());
+    const a1="Beep!";
+    const a2="Boop!";
+    const a3="Be my neigh";
+    let empty= [];
+    for (let i=0; i <= userInputVar; i++){
+      while (userInputVar == 13 && 32); {
+        empty.push(a1);
+      }
+      if (userInputVar.includes(1)) {
+        empty.push(a2);
+      }
+      else if (userInputVar === 3) {
+        empty.push(a3);
+      }
+    }
+
+    }
+
+
+    // User interface
+    $("form").submit(function() {
+      event.preventDefault();
+      userInputVar= parseInt($("input:text[name=userInput]").val());
+      $("#output").append()
+
+    });
 });
+
+
+// onsubmit="checkNumber()"
