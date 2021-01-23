@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
-    //Business logic 
-    function checkNumber(userInputVar){
-    let userInputVar1= parseInt($("input:text[name=userInput]").val());
+  function checkNumber(userInputVar){
+    userInputVar1= parseInt($("input:text[name=userInput]").val());
     const a1="Beep!";
     const a2="Boop!";
     const a3="Be my neigh";
@@ -20,15 +19,13 @@ $(document).ready(function() {
     }
 
     }
+  });
 
-
-    // User interface
     $("form").submit(function() {
       event.preventDefault();
-      userInputVar= parseInt($("input:text[name=userInput]").val());
+      let this = parse($(checkNumber(empty));
       $("#output").append()
 
-    });
 });
 
 
