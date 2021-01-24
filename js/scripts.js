@@ -1,27 +1,29 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-  $("form").submit(function() { 
-    event.preventDefault();
-    const userInputVar = parseInt($("input:text[name=userInput]").val());
-    let result = checkNumber(userInputVar);
-    
-function checkNumber(userInputVar) {
-    let empty=[];
-  for (let i = 0; i < 3; i++) {
-    if (userInputVar == 1) {
-       empty.push("Boop");
-    }
-    if (userInputVar === 21){
-       empty.push("Boop");
-    }
-    else if (userInputVar === 31) {
-       empty.push("Wont you be my!");
-    }
 
+
+  function checkNumber(userInputVar) {
+    var newArray = [];
+    for (var i = 0; i <= userInputVar; i++) {
+      newArray.push(i);
+      }
+    const stringedArray= newArray.toString(" ");
+    stringedArray.replace(/\d*3\d*/g, "Won't you be my neighbor?");
+    console.log(stringedArray)
+    return result;
   }
-  return empty
-}
-$("#output").append(result);
+
+
+
+
+
+$("form").submit(function () {
+  event.preventDefault();
+  const userInputVar = parseInt($("input:text[name=userInput]").val());
+  var result = checkNumber(userInputVar);
+  var checker = doesItHave(result);
+
+  $("#output").append(result);
 
 });
 });
