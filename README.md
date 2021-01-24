@@ -46,3 +46,6 @@ You have my full permission to use and edit this website to your own liking and 
 ## Contact information
 
 If you have any questions or concerns shoot me an [Email](mailto:gkstaff@gmail.com) ! Or shoot me a message through Discord:Zwabbe@7788.
+
+
+
