@@ -4,17 +4,25 @@ $(document).ready(function () {
     
     var newArray = [];
     for (var i = 0; i <= userInputVar; i++) {
-      if (newArray.length == 1){
+      
+      if (newArray.length === 13 || newArray.length === 31) {
+        newArray.push("Won\'t you be my neighbor?")
+      }
+      else if(newArray.length ===1){
+        newArray.push("boop")
+      }
+      else if (newArray.length ===2 || newArray.length === 21 ){
         newArray.push("beep")
+      }
+      else if (newArray.length ===3){
+        newArray.push("Won\'t you be my neighbor?")
       }
       else{newArray.push(i);
       }
-      
-
+      var string = newArray.toString();
     }
    return newArray;
   }
-
 
 
 
@@ -31,4 +39,3 @@ $("form").submit(function () {
 });
 
 
-// onsubmit="checkNumber()"
