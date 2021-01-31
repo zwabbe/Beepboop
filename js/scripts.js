@@ -1,41 +1,25 @@
-$(document).ready(function () {
-
-  function checkNumber(userInputVar) {
-    
-    var newArray = [];
-    for (var i = 0; i <= userInputVar; i++) {
-      
-      if (newArray.length === 13 || newArray.length === 31) {
-        newArray.push("Won\'t you be my neighbor?")
-      }
-      else if(newArray.length ===1){
-        newArray.push("boop")
-      }
-      else if (newArray.length ===2 || newArray.length === 21 ){
-        newArray.push("beep")
-      }
-      else if (newArray.length ===3){
-        newArray.push("Won\'t you be my neighbor?")
-      }
-      else{newArray.push(i);
-      }
-      var string = newArray.toString();
-    }
-   return newArray;
+function arrayCreator(userInput) {
+  let newArray = [];
+  for (let i = 0; i <= userInput; i++) {
+    newArray.push([i].toString());
   }
+  const strungArray = newArray.join(" ");
+  let firstCheck = strungArray.replace(/\S*3.?\S*/g, "Won\'t you be my neighbor?");
+  let secondCheck = firstCheck.replace(/\S*2.?\S*/g, "Boop!");
+  let thirdCheck = secondCheck.replace(/\S*1.?\S*/g, "Beep!");
+  return thirdCheck;
+}
 
 
 
 
-$("form").submit(function () {
-  event.preventDefault();
-  const userInputVar = parseInt($("input:text[name=userInput]").val());
-  var result = checkNumber(userInputVar);
 
 
-  $("#output").append(result);
-
+$(document).ready(function() {
+  $("form").submit(function() {
+    event.preventDefault();
+    const userInput = parseInt($("input:text[name=userInput]").val());
+    const result = arrayCreator(userInput);
+    $("#output").text(result);
+  });
 });
-});
-
-
