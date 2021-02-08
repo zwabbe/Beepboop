@@ -4,9 +4,9 @@ function arrayCreator(userInput) {
     newArray.push([i].toString());
   }
   const strungArray = newArray.join(" ");
-  let firstCheck = strungArray.replace(/\S*3.?\S*/g, "Won\'t you be my neighbor?");
-  let secondCheck = firstCheck.replace(/\S*2.?\S*/g, "Boop!");
-  let thirdCheck = secondCheck.replace(/\S*1.?\S*/g, "Beep!");
+  let firstCheck = strungArray.replace(/\S*3\S*/g, "Wont you be my neighbor?");
+  let secondCheck = firstCheck.replace(/\S*2\S*/g, "Boop!");
+  let thirdCheck = secondCheck.replace(/\S*1\S*/g, "Beep!");
   return thirdCheck;
 }
 

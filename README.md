@@ -47,21 +47,24 @@ If you wish to make changes to the project then follow these steps:
 
 ## Specifications
 ```
-Describe: checkNumber()
+Describe: arrayCreator()
 
-Test: It should return an array of values to the length of user input.
-Expect: (robogersInput(5).toEqual([0, 1, 2, 3, 4, 5]));
+Test: It should return an create an array of values to the length of user input. And converts them to a string while looping. 
+Expect: (arrayCreator(5).toEqual(["0, 1, 2, 3, 4, 5"]));
 
-Test: On each loop it will check for  1, 2, or 3 and converts them to new string.
-Expect: checkNumber[1].toString(Boop)  and  checkNumber[2].toString(Beep) 
-and checkNumber[3].toString("Wont you be my neighbor")
+Test : Take the array and split it into seperate strings inside the array
+expect: (arrayCreator(5).toEqual(["0","1","2","3","4","5"])
 
-Test: check for 13, 21, and 31 exceptions and convert those to  chosen strings.
-Expect checkNumber[13].toString(Boop)  and  checkNumber[21].toString(Beep) 
-and checkNumber[31].toString("Wont you be my neighbor")
 
-Test: Once those numbers have been converted on loop to then push the results to the output field
-Expect checkNumber[0,beep, boop, Wont you be my neighbor, 5.... so on
+Test: Check stringed array to see if the array has any numbers with 3 in them and converts it to "Will you be my neighbor?"
+expect  (arrayCreator(5).toEqual(["0", "1", "2", "Will you be my neighbor?", "4", "5"....9, 10, 11, 12, "Will you be me neighbor?"]));
+
+Test: Check stringed array to see if the array has any numbers with 2 in them and converts it to "Boop!"
+expect  (arrayCreator(5).toEqual(["0", "1", "Boop!", "Will you be my neighbor?", "4", "5"....9, 10, 11, Boop!, "Will you be...",]));
+
+Test: Check stringed array to see if the array has any numbers with 1 in them and converts it to "Beep!"
+expect  (arrayCreator(5).toEqual(["0", "Beep", "Boop!", "Will you be my neighbor", "4", "5" ..."9", "Beep", "Boop", "Will you be...",]));
+
 
 
 ```
